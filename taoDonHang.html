@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Tạo đơn hàng</title>
+  </head>
+  <body>
+    <section class="py-3">
+      <div class="container">
+        <div class="card">
+          <h2 class="text-center mt-3">Tạo đơn hàng</h2>
+        </div>
+        <div class="card">
+          <b class="ml-4">Thông tin khách hàng</b>
+          <form>
+            <div class="form-group ml-4 mr-4">
+              <b>Họ và tên</b>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Nhập họ và tên"
+              />
+            </div>
+            <div class="form-group ml-4 mr-4">
+              <b>Địa chỉ khách hàng</b>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="Nhập địa chỉ khách hàng"
+              />
+            </div>
+            <div class="form-group ml-4 mr-4">
+                <b>Số điện thoại</b>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Nhập số điện thoại"
+                />
+              </div>
+          </form>
+        </div>
+        <div class="card">
+            <b class="ml-4">Thông tin sản phẩm</b>
+            <form>
+              <div class="form-group ml-4 mr-4">
+                <b>Mã sản phẩm</b>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="maSP"
+                  placeholder="Nhập mã sản phẩm"
+                />
+              </div>
+              <div class="form-group ml-4 mr-4">
+                <b>Tên sản phẩm</b>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameSP"
+                  placeholder="Nhập tên sản phẩm"
+                />
+              </div>
+              <div class="form-group ml-4 mr-4">
+                <b>Số lương</b>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="number"
+                  placeholder="Nhập số lượng"
+                />
+              </div>
+              <button class="btn btn-group ml-4"> Thêm sản phẩm</button>
+              </form>
+              <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Mã sản phẩm</th>
+                      <th>Tên</th>
+                      <th>Số lượng</th>
+                      <th>Thành tiền</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>111</td>
+                          <td>Táo</td>
+                          <td>5</td>
+                          <td>50.000đ</td>
+                          <td><button class="btn btn-group">Xóa</button></td>
+                      </tr>
+                      <tr>
+                        <td>112</td>
+                        <td>Xoài</td>
+                        <td>3</td>
+                        <td>50.000đ</td>
+                        <td><button class="btn btn-group">Xóa</button></td>
+                    </tr>
+                  </tbody>
+              </table>
+        </div>
+        <a href="http://127.0.0.1:5500/theoDoiDonHang.html" class="btn btn-light" role="button">Xác nhận đơn hàng</a>
+    </section>
+  </body>
+</html>

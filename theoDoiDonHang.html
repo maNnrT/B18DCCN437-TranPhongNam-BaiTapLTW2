@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet"  href="css/style.css">
+    <title>Theo Dõi Đơn Hàng</title>
+</head>
+<body>
+    <section>
+        <div class="container px-1 px-lg-4 py-5 mx-lg-auto">
+            <div class="card">
+                <h2 class="text-center mt-3">Theo dõi đơn hàng</h2>
+            </div>
+            <div class="card">
+                <div class="row justify-content-between d-flex px-3 top">
+                    <div class="d-flex">
+                        <h5>Đơn hàng <span class="text-primary font-weight-bold">#12345</span></h5>
+                    </div>
+                    <div class="d-flex flex-column text-sm-right">
+                        <p class="mb-0">Giao hàng dự kiến <span>13/12/2021</span></p>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12">
+                        <ul id="progressbar" class="text-center">
+                            <li class="active step0"></li>
+                            <li class="active step0"></li>
+                            <li class="active step0"></li>
+                            <li class="step0"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row justify-content-between top">
+                    <div class="row d-flex icon-content">
+                        <div class="d-flex flex-column">
+                            <p class="font-weight-bold">Xác nhận đơn hàng</p>
+                        </div>
+                    </div>
+                    <div class="row d-flex icon-content">
+                        <div class="d-flex flex-column">
+                            <p class="font-weight-bold">Lấy hàng</p>
+                        </div>
+                    </div>
+                    <div class="row d-flex icon-content">
+                        <div class="d-flex flex-column">
+                            <p class="font-weight-bold">Giao hàng</p>
+                        </div>
+                    </div>
+                    <div class="row d-flex icon-content">
+                        <div class="d-flex flex-column">
+                            <p class="font-weight-bold">Giao hàng <br>thành công</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="card">
+                        <div class="row d-flex justify-content-between px-3 top">
+                            <div class="d-flex">
+                                <h6><span class="text-primary font-weight-bold">10/12/2021 10:00:00 AM </span>Xác nhận đặt hàng</h6>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between px-3 top">
+                            <div class="d-flex">
+                                <h6><span class="text-primary font-weight-bold">10/12/2021 15:00:00 AM </span>Đã chuẩn bị xong hàng</h6>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between px-3 top">
+                            <div class="d-flex">
+                                <h6><span class="text-primary font-weight-bold">12/12/2021 10:00:00 AM </span>Đơn vị vận chuyển nhận hàng </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                            <div class="p-3 ">
+                                <div class="d-flex flex-column align-items start font-weight-bold">
+                                    <b>Thông Tin Giao Hàng</b>
+                                    <p class="text-justify">Nguyễn Văn A</p>
+                                    <p class="text-justify">Số 112, Đường Hồ Tùng Mậu, Quận Cầu Giấy, Hà Nội, Việt Nam </p>
+                                    <p class="text-justify">Số điện thoại: 012345678</p>
+                                </div>
+                            </div>
+                    </div>
+    
+                </div>
+                
+            </div>
+            <div class="wrapper bg-white my-3 rounded">
+                <div class="table-responsive rounded">
+                    <table class="table table-borderless">
+                        <thead>
+                        <tr class="text-uppercase">
+                            <th scope="col">Sản phẩm</th>
+                            <th scope="col" class="text-right">Tổng tiền</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td class="text-right"><b>100.000đ</b></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-start align-items-center list py-1">
+                    <div><b>5</b></div>
+                        <div class="mx-3"><img
+                            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhUYFhgaHBocGhwcHBwcHBwcHhwcHhoaHRwcIS4lHh4rIRoYJjgmKy8xNTU1HCQ7QDs0Py40NTEBDAwMEA8QHxISHzYrJSs2NDQ2NDQxNTQ0NDQ0NDQ0NTQ0NDQ0ND00NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIANwA5QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABAECAwUGBwj/xAA8EAABAwIDBQUHAgUDBQAAAAABAAIRAyEEMUEFElFhcQaBkaHwBxMiMrHB0VLxFCNCguFicpIVM1Oywv/EABoBAQADAQEBAAAAAAAAAAAAAAABAgQDBQb/xAAqEQACAgEEAQMEAQUAAAAAAAAAAQIRAwQSITFBE1FhInGRoQUjMkKBsf/aAAwDAQACEQMRAD8A9mREQBERAEREAREQBERAEREAREQBEVEARaDafaanTdutHvCM4MAcpgyei0eM7UV3kCmBTFr/ADEnUSREdyyT1eKDq7fwVckju5VgeDkQe9eaOrvdJc97jOpOs6aZKl2wQI1nhdcHr34j+yu89PlF5xQ2vWblVfxud4afqnwWyw/aqo2A4NeO9rjztI8leOvhdSTRZTR2qLT7P7QUakDe3HH+l1vA5FbcFbIZIzVxdkp2XIiK5IREQBERAEREAREQBERAEREAREQBERAERUQFj3gCSQAMybLi+0HaDfd7uk4hsfE5tt4nMTnAHjKdsdqku9yzIfNzOg7p8TyXLQSZOQufxymfJeRqtW5SeOHXlnKcvCM9IQ2TFzYcYnyCzNdvEjU+QsYHSfqsbiXEaW7hGnriqhu6Dq6IPTSOfFZIpeDmSHVxFoJ1PMAzA8eqjODnWN+PLlwyOaMZxyjM9P28Ue+W2sOmcRcq6dhlJAFgXCbmYvOUcOaPcA6AJdHTrCqw7jOefK2Xf6ulC4k2A1jOf6esqri2RZSxOgAz4AW8eEqZsra9SgZb8TTm0mxE5NkwDzuoVTESTAbBz1PLPTwWOo8ax52GmtjF0jcJbouhuro9R2dj21mB7RAOhIJHXdJAUxea7D2j/Dv3nbxabFodEcHbpsT1hehYTFNqNDmODmnUf41XsafOskeezRGW5ElERaSwREQBERAEREAREQBERAEREAREQFFbUdAJ4AlWV6gaCZUZtdzrNy1cbdYCo2ugee1Xbzt8mXOJMxnfO2d5yVtWgQJdDRmSfACM/LVdNtjs24w+kZcBDmj4Qbky0ZDM2XM4rDvpHdcC08Df/B6rwZ6d45Pdf3OMk12XsqM/VcXAjW8XJ8liqYjdMbjgeZaNRwE5qxmG3yYaQeUkeGnmpNbBVmhu807p+UOa7XQGJHRWiuOFwV5MNPEsNiwAHIkuIkaEeuiOqBph7JHInx5j6yp1Hs/Vc0OFJwnSQ0/8X3iVssL2XqEfGQ0aNMO8Iy8V1jhm/H6CjJmkc9hu1u9xu4HvHDyVjXMdEMgtsASQe6/NbHaOwH0hv/0jXUdY0UajgqlQAtpl1rOa0xzkkR3KzjJOnHkhp3RC+CYcwgzxMAxrrwyQNAuWGSZmbHmDF+nNTKuGe2z2kRq4QfNZcLsmqcmuMxoQCOuXfyUbL8EbWa8MGk9ZuJ7tVuezDK3vgWXaPnkndjuzdwstpguzNhvkC4MNueJBJEDuXS06QaIAAA0AgeC0YdNK1J8HSEHdsyoiL0TsEREAREQBERAEREBRFirVg0STC1OJ2zo3xzP4VZSS7OkMUp9I3SpvAarka+Pc7V56H8GFBq4l82bUPdKp6qNMdFJ9s7r3rf1DxC4/t7tevhxSqUnfyy4tfETJ+S/DPwWnxuNfumWlv+oZjqJkLSVatV4I33OabFpMgjgWnuVXlVdGjF/HNu9yMvZLajqmNZ757i1+8LuOYa4tB4DPwC9TqbUotsajR3rw1sUawkFolrjGrTMnlF107dmB+7feJNjnaNOIUPJtVpCGjjkm1OVV8HpLNtUCYFRpPJH4rD1IksdGW8AfquHwnZqBJka3EQq1Ozzi4Q6P9RcAPAGfALn6s3w42WlotN0sj/B32Go023Y1gnPdAE+Ckrh2VGYZsh5cc5c4x3CVoNo+0Gs0/Cxrm8Q/6iJC7qaS5VGVaGc5Vj5Xu+D1hF49hvaI6fjY5vNpldJs3trvx8QdyNipWWLE9Blh2d4Uha3Z22adawMHgc1sgrqn0Y5RcXTQLVUBVRSQEREAREQBERAEREAREQFoWv2vtVlBsuNzkNSsXaDbDMLRdVfeLNbq5xyAXlX8ZUxLzWqugTpoMw1vhmuGbLsXHZ6Og0LztylxFfv4Ozp7QdXJc4w3Qfcz9FOo0muyvzP2C5dmINNogQ226Nekcb/RbXZ7KriTkDn1EXzv9F58cknK3yb8uFQVxdLwb0UgLnLktZjtqFo+BrTeJN1OawBom/FYywE5Aa+C0fW+nRkhSdyVmjrbfe1wHuweJLfpxUKvtreJjBMJ4kCSY5N6LpTSDvrfyCxmkLmApSl5ZrjPCv8ADn7s4bHbYex8/wANQBAs4U96LZAnSc4WB3a/FxutcxvDdaBHILscaGmQRK5+ps9hk7oBlQ93ubcXoNW4K/yaDFbUxJMurPnOzj9lCdj6rif5jzNz8TtNV1deiwiCAVzO0cKGkkFQ0zRGUHwopf6IVWu9/wAzi7qSfqsZoGbX7lnYYNri8HIxoYv9VNp1ATkMhkBp0REZFx9JAp4eCp9PCfpOXdoszqIvforKTi0q1ozSUmja4HHvbEkmNQYcO9eg9mu0O/DKjgSbNdlJ/S4aO+q89ova6JifsszwWGQbcdRwPcusZNcnnZscZ/S1TPZpVVo+y+1/f0viPxtgO58D3reLQnas8aUXGTTKoiKSAiIgCIiAIiIC1IRajtTtL+HwtWqPmDYb/uPwt8yFDdKyYRcpKK7fB5d2924cRiXMaf5dI7oyguHzHxkf2hYNn/0ga6aaz5BaKg2XHeImdbEmTJPNbvCtmIzMAcha/iF503ufJ9thxRxYFBeDp9j4YPcHOvumx/AP15BdGXBoAGWv2C12AYGNAas1SrefBXjFRPGztzn8GZ1a6udVUNjxMHJHOM9ZV7K7EZ9+yx++EELDUqwFrMTiIdHUKGzrDFZnxD9Rl/la3EG5V3vjds24LT7Uxu62AeVuao2bMcHdGPEYwl26L9PwFpcXVuVR+Ktb5p8uCivcXHmSo3Gz00kWb5KkU62ShG08u9ZmHVWOLkbRuItHT91TflRg8Wjvnj+0K9r7qKK7kS8PVP4XQYR4eC3w8Mlze+BEd45+oW12XVh4vYkK8ZUZs+NSVrs3fZjGGhiWgmGu+F3Q5HuK9UC8m2vh90tePRkGV6ZsjEb9FjtS0T1FitGN9o8XWQ6mvsT0RF1MIREQBERAEREBauB9rOL3cPTpg3e+T0aCf/bdXfLyv2t1Jq0GcGuP/Ix/8rnldRZt/j4qWojZw+BZLwIz/K6HYplwJyGXfMBc7QMGZW+2I+7ROVz67ysNcn1mV/QzsadSwQ1cjzPjoojKlh69BY3PIgZxn1V2eYopkrfJ0vCe+8gotJxOvI6a39clGrVYFkssoW6M9fE/WFCfWEmbkiyh1Hndne+vrioFbFFVs7xgidi8TEwcgubxGIm6lYt5IjiY5lah775qGaIJRRk3bb0ieCwOcsjX/Cb34cliOvE+vwiRM5exbnKzUCJv4rA20rI0Rr69fVXMzZKMSfLosrcgeM+SjMfbvUqlw5H91JzsTl+6mYGoRfp4qA0GfJTsCDOVskIuzta/x0On4XVdh8RvYeNWuI9eC5DZRmkQfVlvPZ2//vNnItP1XeD5R5Wqj/Ta9mdwiIu55QREQBERAEREBReM+1apONa3RtJvm569mXi/tbpxjGu1NJnk50/Zcs39pv8A451nv4ZyDHxHruUvDYpzbgwbWjPv5QPFQWD4onv6qrH6aLEz6uPXJ0OF269ucGdOHf0WZ+35m0zx+vriubLrAWtPr6qrqpF5vkOiWHih3R1WG2u2JcQPFXf9QY8wDquSY+CDn9Fe2uREQLyllXhj2jf4irppK1lau0G+itqY+RcX8lrqj966WV20XYjEl2WQ9SsFRwMHU5q1hznJWF17KTnKXBkY+DrCsLrq+k4Gx4H/AAq02tvvTy6oc3IpJJ6CPsqxcKw/fNZXtuPWisUbL6I05qZhmXvkoNNxH3Wwp/IdDp5KSPBaBmZvI9euKlYRxJaJ1lRFM2ePjb19eSkqdrgLUz66rZ+zxvxVzpDR9VpXVN2m7QZfk+a6L2cs/l1Hfqd+fwu0e0ebqeMUn7tHaIiLueSEREAREQBERAWryr2w0Yfh3x/S9v3M9LeK9WK4z2n4D3mCc8CTTId/aTDvse5UyK4s06SW3Mvx+TxaoLyMiJPLRWtfMckI9eu9KeRGo9QsLR9XGXRk3slcHCfikiRr0WMOurqrwQIFx6n1wVWdr4sPzKyMbOfrgsTnybBS6DLTy8lVuhuTVmF0XGUKMIyF1NLBJ71HDBfqkWcZtmB9MtJ5qxzlke6TyFgrGCXLojM2XBoEEH11VWMJ4R4Kj3cNSUY8g8CnJFlzokTcLM8SZHj1WJnxWPFZw+BClFGzG1wJ4DisrHm3VY3tgKtJpgK4RMaN53d5rZYKlD5/Tb6KHg2SLD1otthGRHinkl8ImbTrbrAOOnrqPBeidisLuYZs5uv675XmDj76sxgyLmtt1v8Ade04SjuMa3gAF2xcts8vXS2xUffkkIiLueWEREAREQBERAUUXaGFbVpvpuEtc0tPeFKRCU6do+adoYN1Gs+k6zmuc0+MA9/3Ciz66r0v2sbEhzMW0WMMqRof6HfbwXmjTe6xTjtdH0+lzLJjUi4C8k27rKjxGqvewWj16srXMtmOK5mxPgoHW7lIZV+HuGXVR3Pn6dVmY8H4YuqtFN1FwdYzPoKx4Mx3oWS2eSxVCRnYjJEjnKTZSrAKtJEZXRz5i02V1N1vt4K3gpZYVcQDHHVUyPFUzIEqxzlIy0vJXON7oICq0XylQuypTd4qZRZvWaLkwOSwBl+a3eFphrZ9dVbovFWZqFENt5fT8q+rUjK6wmtfr6lWudHqyrZejoewmC95ig45MG8euQ9c160uT9n+zfd0PeEfFUO93aLrAtmJVE8DW5N+V10uCqIi6GQIiIAiIgCIiAIiIDX7Z2ezEUX0XiWvBHQ6EcwYK+ftr7Lfhqj6bxdsieI4j1ZfSC4X2jbC95T961slvzcYXHLG1Z6Gg1Hpz2vpnjU6arKII4H1/lKjIOZnh35FYniIWVo+hi7RmZTB15LK/Dhus8R+FTDuGV78lL3BqpSRzmmiI1hBvkR4qNXM28FsTSBI04cPWagVWQ6Mhx/ZV20ypiacuSve++n0Vpcfl75Rhv08EKMq4RJ8FWjT1Vr3W6rJQOQiU8HNszNpzwz8vwr9zdyCz0aYFz+wVXtBI81dKi0Y2W4SnfeN1saYJ1UakItNvV1Lw4VWdkqReKcamSpmxNn/AMRiGUgDuzvP/wBoz/CjVH7rSV6B7PdjmnSNd4h9TIHRunj+FfHHdIy6rN6eNvz0jsKVMNAAEAAADgAsqItp86EREAREQBERAEREAREQBYqtMOaWkSCII4grKiA8M7d7AdhqxIncfdh+rTGo/C5In15r6M27shmJpOpvGeR1B0IXiuP7MPo1HMe4SCYMGDwPgsmSFPg+g0OrU47Zdr9mlwToJkcuimsMozC7mdz59yoGXsuR6TVrgsrAtIOmvrwUbEsO8ZPCOnFbI8Co+PoHQ6QjKbaNZvCdUYAJ6KjmEG4QjI2Q5SRjcdApmGzyjRQgL2WzwlGLkqxxrkltyMrFSMmRl6ur3tkd6zU2wNJsAjO8VQo05vzk/YKfTbuiSouHI1Nh5qZgMHUxVVtFggE/E6MhqVCjZGSairfRsuyuxnYytvOH8lhBf/qdmGjjz5dV68xoAjICwUPZOzWYek2kwQ1o7ydSeZU9bIR2o+e1Wd5p34XRVERXMwREQBERAEREAREQBERAEREBbC1e29jtrtg2cPlPD/C2qtdyUNWuS0ZOLuPZ4ntzZ7qTy1zS1w04j9Q4t6LTPt0K9p25s73rYLGvjIkXaeLSLjuXme1uzlZjiQ23L8aFZZ42naPf0mujKNT4ZomrLUfMWjNa3GV3UzBBlYGbXdrTcRxE/hV2SZolrMSdNk57QZlYnsHBRnbTYdS08xCqa+s2Ta12Qs2OXTMjKV1JMKCMQsgq8SApSbKSnCPLZKD4vMKoM9Y005KPh2veYa0knhB+66/YfZKs+C5oYOLnNnua2T4qdjOT1cfc1GCwL3uaxrS5xNh1XrnZXs+3C07wajvmP2CybC2HRw4lvxPObjn3cFu12hDbyzzNVq3k+ldf9LkRF1MQREQBERAEREAREQBERAEREAREQBERAUhY30WnMArKiAhO2ZSObGnuCp/0uj/42+AUxEpFrZqMT2aw1QQ6iw/2haTFezXAvyplv+1zm/QrspRRtRKnJeTgWeyzCNMh1ToXEjzWwoez7CNuWl3Urr0Tag8k/c56n2RwzcmAdym0di025SFtETaiN0vcj08MG8VIARVUkN2EREICIiAIiIAiIgCIiA//2Q=="
+                            alt="apple" class="rounded-circle" width="30" height="30"></div>
+                        <div class="order-item">Táo</div>
+                </div>
+                <div class="d-flex justify-content-start align-items-center list my-2 py-1">
+                    <div><b>3</b></div>
+                    <div class="mx-3"><img
+                            src="https://file.vfo.vn/hinh/2018/02/qua-xoai.jpg"
+                            alt="apple" class="rounded-circle" width="30" height="30">
+                    </div>
+                    <div class="order-item">Xoài</div>
+                </div>
+                <div class="pt-2 border-bottom mb-3"></div>
+                <div class="d-flex justify-content-start align-items-center pl-3">
+                    <div>Phương thức thanh toán</div>
+                    <div class="ml-auto"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSam7I1MHu8feAEARzzyHGCjUN12Xddp98Rk2aMbO1wp-xoLtBdnCSs74D4E4lPdux9TFk&usqp=CAU" alt=""
+                            width="30" height="30">Ví Momo</div>
+                </div>
+                <div class="d-flex justify-content-start align-items-center py-1 pl-3">
+                    <div>Vận chuyển</div>
+                    <div class="ml-auto">20.000đ</div>
+                </div>
+                <div class="d-flex justify-content-start align-items-center pl-3 py-3 mb-4 border-bottom">
+                    <div> Tổng tiền</div>
+                    <div class="ml-auto h5"> 120.000đ</div>
+                </div>
+                <div class=" justify-content-between rounded subscriptions">
+                    <div> Tổng cộng: <b> 120.000đ cho 8 sản phẩm</b></div>
+                </div>
+            </div>  
+        </div>
+    </section>
+</body>
+</html>
